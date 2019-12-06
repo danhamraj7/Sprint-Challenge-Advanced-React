@@ -73,3 +73,9 @@
 
   background-color: #313843;
 }
+
+h1 {
+  font-size: 60px;
+  color: dodgerblue;
+  background-color: rgb(14, 3, 14);
+}
