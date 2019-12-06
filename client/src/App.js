@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import PlayerCard from "./components/PlayerCard";
 import "./App.css";
 
 class App extends React.Component {
@@ -28,6 +29,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Players</h1>
+        <PlayerCard
+          key={this.state.playerData.id}
+          playerData={this.state.playerData}
+        />
         />
       </div>
     );
