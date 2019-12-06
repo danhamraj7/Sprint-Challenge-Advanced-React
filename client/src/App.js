@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import PlayerCard from "./components/PlayerCard";
+import Button from "./components/Button";
 import "./App.css";
 
 class App extends React.Component {
@@ -18,7 +19,6 @@ class App extends React.Component {
 
       .then(res => {
         this.setState({ playerData: res.data });
-
         console.log(res);
       })
 
@@ -28,11 +28,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Players</h1>
+        <Button />
+        <h1 className="players">Players</h1>
         <PlayerCard
           key={this.state.playerData.id}
           playerData={this.state.playerData}
-        />
         />
       </div>
     );
